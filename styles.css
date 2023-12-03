@@ -3,12 +3,14 @@ body, html {
     padding: 0;
     height: 100%;
     overflow: hidden;
+    background-color: #000; /* Dark background */
 }
 
 canvas {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 1; /* Ensures the canvas is behind the content */
 }
 
 .content {
@@ -16,15 +18,27 @@ canvas {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: black;
+    color: white; /* Light text for dark background */
     text-align: center;
-    z-index: 10;
+    z-index: 2; /* Ensures the content is above the canvas */
 }
 
 header h1 {
     font-size: 3em;
+    margin: 0;
 }
 
 footer {
     margin-top: 20px;
+    font-size: 1em;
+}
+
+/* Additional styling for dark theme */
+a {
+    color: #4CAF50; /* Stylish green color for links */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #66ff66;
 }
